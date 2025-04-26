@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Recharge Jio </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f0ff',
+                            100: '#e0e0ff',
+                            200: '#c2c2ff',
+                            300: '#a2a1ff',
+                            400: '#8281ff',
+                            500: '#6665ff',
+                            600: '#5D5CDE',
+                            700: '#4645b2',
+                            800: '#343391',
+                            900: '#232275'
+                        }
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .dark .glass {
+            background: rgba(30, 30, 30, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .progress-bar {
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -1000px 0 }
+            100% { background-position: 1000px 0 }
+        }
+        
+        .shimmer {
+            animation: shimmer 2s infinite linear;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+            background-size: 1000px 100%;
+        }
+        
+        .dark .shimmer {
+            background: linear-gradient(to right, rgba(50,50,50,0) 0%, rgba(50,50,50,0.2) 50%, rgba(50,50,50,0) 100%);
+            background-size: 1000px 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Dark mode detection -->
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+    
+    <!-- Header -->
+    <header class="shadow-lg p-4 glass sticky top-0 z-10">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+                    <i class="fas fa-bolt text-white"></i>
+                </div>
+                <h1 class="ml-2 text-xl md:text-2xl font-bold text-primary-600">Free Recharge Jio<span class="text-xs align-top text-red-500 ml-1">Prank</span></h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 text-gray-700 dark:text-gray-300">
+                <a href="#" id="homeNav" class="hover:text-primary-600 transition-colors">Home</a>
+                <a href="#" id="plansNav" class="hover:text-primary-600 transition-colors">Plans</a>
+                <a href="#" id="aboutNav" class="hover:text-primary-600 transition-colors">About</a>
+                <a href="#" id="contactNav" class="hover:text-primary-600 transition-colors">Contact</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon hidden dark:block text-yellow-300"></i>
+                    <i class="fas fa-sun block dark:hidden text-yellow-500"></i>
+                </button>
+                
+                <button class="block md:hidden p-2" id="mobileMenuButton">
+                    <i class="fas fa-bars text-gray-700 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden mt-4 md:hidden">
+            <nav class="flex flex-col space-y-3 text-gray-700 dark:text-gray-300">
+                <a href="#" id="homeMobileNav" class="hover:text-primary-600 transition-colors">Home</a>
+                <a href="#" id="plansMobileNav" class="hover:text-primary-600 transition-colors">Plans</a>
+                <a href="#" id="aboutMobileNav" class="hover:text-primary-600 transition-colors">About</a>
+                <a href="#" id="contactMobileNav" class="hover:text-primary-600 transition-colors">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="py-12 px-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white mb-6">
+                Free Recharge Jio<span class="text-primary-600">Prank</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-10">
+                Prank your friends with a fake Jio recharge! Input their number, select a plan, and share the "success" receipt.
+            </p>
+            
+            <div class="glass rounded-xl p-6 max-w-md mx-auto shadow-xl">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-6">Enter Mobile Number</h2>
+                <div class="relative mb-6">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                        <i class="fas fa-mobile-alt text-gray-500 dark:text-gray-400"></i>
+                    </div>
+                    <input type="tel" id="phoneNumber" class="bg-white dark:bg-gray-800 text-gray-900 dark:text-white text-base rounded-lg block w-full pl-10 p-3 border border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-primary-600 focus:border-primary-600 outline-none" placeholder="Enter 10 digit Jio number" maxlength="10" pattern="[0-9]{10}">
+                </div>
+                <button id="proceedToPlans" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg text-base px-5 py-3 transition-colors duration-300 flex items-center justify-center">
+                    <span>Continue to Plans</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Plans Section -->
+    <section id="plans" class="py-12 px-4 bg-gray-100 dark:bg-gray-800 hidden">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Choose a Recharge Plan</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Plan 1 -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer plan-card" data-amount="239">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">₹239 Plan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Validity: 28 Days</p>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">1.5GB/day Data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Unlimited Calls</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">100 SMS/day</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">JioCinema & JioTV</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary-50 dark:bg-primary-900/30 p-4 text-center">
+                        <span class="text-2xl font-bold text-primary-600">₹239</span>
+                    </div>
+                </div>
+                
+                <!-- Plan 2 -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer plan-card" data-amount="299">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">₹299 Plan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Validity: 28 Days</p>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">2GB/day Data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Unlimited Calls</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">100 SMS/day</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">All Jio Apps</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary-50 dark:bg-primary-900/30 p-4 text-center">
+                        <span class="text-2xl font-bold text-primary-600">₹299</span>
+                    </div>
+                </div>
+                
+                <!-- Plan 3 -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer plan-card" data-amount="749">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">₹749 Plan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Validity: 90 Days</p>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">2GB/day Data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Unlimited Calls</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">100 SMS/day</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Disney+ Hotstar</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary-50 dark:bg-primary-900/30 p-4 text-center">
+                        <span class="text-2xl font-bold text-primary-600">₹749</span>
+                    </div>
+                </div>
+                
+                <!-- Plan 4 -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer plan-card" data-amount="479">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">₹479 Plan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Validity: 56 Days</p>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">1.5GB/day Data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Unlimited Calls</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">100 SMS/day</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">JioCinema Premium</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary-50 dark:bg-primary-900/30 p-4 text-center">
+                        <span class="text-2xl font-bold text-primary-600">₹479</span>
+                    </div>
+                </div>
+                
+                <!-- Plan 5 -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer plan-card" data-amount="999">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">₹999 Plan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Validity: 84 Days</p>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">3GB/day Data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Unlimited Calls</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">100 SMS/day</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Netflix + All Jio Apps</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary-50 dark:bg-primary-900/30 p-4 text-center">
+                        <span class="text-2xl font-bold text-primary-600">₹999</span>
+                    </div>
+                </div>
+                
+                <!-- Plan 6 -->
+                <div class="glass rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 cursor-pointer plan-card" data-amount="349">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white">₹349 Plan</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Validity: 30 Days</p>
+                    </div>
+                    <div class="p-5">
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">2.5GB/day Data</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Unlimited Calls</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">100 SMS/day</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span class="text-gray-700 dark:text-gray-300">Amazon Prime</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary-50 dark:bg-primary-900/30 p-4 text-center">
+                        <span class="text-2xl font-bold text-primary-600">₹349</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recharge Processing Section -->
+    <section id="rechargeProcessing" class="py-12 px-4 hidden">
+        <div class="container mx-auto max-w-2xl">
+            <div class="glass rounded-xl p-8 shadow-xl">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Processing Your Recharge</h2>
+                    <p class="text-gray-600 dark:text-gray-400" id="processingPhoneNumber">Mobile Number: +91 XXXXXXXXXX</p>
+                    <p class="text-gray-600 dark:text-gray-400" id="processingPlanAmount">Plan: ₹XXX</p>
+                </div>
+                
+                <!-- Countdown Timer -->
+                <div class="text-center mb-6">
+                    <div class="w-28 h-28 rounded-full bg-primary-50 dark:bg-primary-900/30 mx-auto flex items-center justify-center border-4 border-primary-200 dark:border-primary-800">
+                        <div class="text-center">
+                            <span id="countdownTimer" class="text-4xl font-bold text-primary-600">30</span>
+                            <p class="text-xs text-gray-500 dark:text-gray-400">seconds</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative pt-1 mb-6">
+                    <div class="flex mb-2 items-center justify-between">
+                        <div>
+                            <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-primary-600 bg-primary-200 dark:bg-primary-900">
+                                Progress
+                            </span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-semibold inline-block text-primary-600" id="progressPercentage">
+                                0%
+                            </span>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-primary-200 dark:bg-primary-900/30">
+                        <div id="progressBar" class="progress-bar shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary-600 relative overflow-hidden shimmer"></div>
+                    </div>
+                </div>
+                
+                <div id="processingSteps" class="space-y-4 mb-8">
+                    <div class="flex items-center" id="step1">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+                            <i class="fas fa-check text-primary-600 hidden" id="step1Check"></i>
+                            <div class="animate-spin" id="step1Spinner">
+                                <i class="fas fa-circle-notch text-primary-600"></i>
+                            </div>
+                        </div>
+                        <span class="ml-3 text-gray-700 dark:text-gray-300">Verifying mobile number...</span>
+                    </div>
+                    
+                    <div class="flex items-center opacity-50" id="step2">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+                            <i class="fas fa-check text-primary-600 hidden" id="step2Check"></i>
+                            <div class="animate-spin hidden" id="step2Spinner">
+                                <i class="fas fa-circle-notch text-primary-600"></i>
+                            </div>
+                        </div>
+                        <span class="ml-3 text-gray-700 dark:text-gray-300">Connecting to Jio servers...</span>
+                    </div>
+                    
+                    <div class="flex items-center opacity-50" id="step3">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+                            <i class="fas fa-check text-primary-600 hidden" id="step3Check"></i>
+                            <div class="animate-spin hidden" id="step3Spinner">
+                                <i class="fas fa-circle-notch text-primary-600"></i>
+                            </div>
+                        </div>
+                        <span class="ml-3 text-gray-700 dark:text-gray-300">Processing payment...</span>
+                    </div>
+                    
+                    <div class="flex items-center opacity-50" id="step4">
+                        <div class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+                            <i class="fas fa-check text-primary-600 hidden" id="step4Check"></i>
+                            <div class="animate-spin hidden" id="step4Spinner">
+                                <i class="fas fa-circle-notch text-primary-600"></i>
+                            </div>
+                        </div>
+                        <span class="ml-3 text-gray-700 dark:text-gray-300">Completing recharge...</span>
+                    </div>
+                </div>
+                
+                <div id="processingMessage" class="text-center text-gray-600 dark:text-gray-400 italic">
+                    Please wait while we process your recharge...
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Success Section -->
+    <section id="rechargeSuccess" class="py-12 px-4 hidden">
+        <div class="container mx-auto max-w-2xl">
+            <div class="glass rounded-xl overflow-hidden">
+                <!-- Receipt -->
+                <div id="receiptContent" class="p-8">
+                    <div class="text-center mb-8">
+                        <div class="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center mx-auto">
+                            <i class="fas fa-check text-green-500 text-2xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-gray-800 dark:text-white mt-4">Recharge Successful!</h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">(Remember: This is a prank app, no actual recharge was made)</p>
+                    </div>
+                    
+                    <div class="border-t border-b border-gray-200 dark:border-gray-700 py-4 mb-6">
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-600 dark:text-gray-400">Mobile Number:</span>
+                            <span class="font-medium text-gray-800 dark:text-white" id="receiptPhoneNumber">+91 XXXXXXXXXX</span>
+                        </div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-600 dark:text-gray-400">Plan Amount:</span>
+                            <span class="font-medium text-gray-800 dark:text-white" id="receiptPlanAmount">₹XXX</span>
+                        </div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-600 dark:text-gray-400">Transaction ID:</span>
+                            <span class="font-medium text-gray-800 dark:text-white" id="receiptTransactionId">JIO123456789</span>
+                        </div>
+                        <div class="flex justify-between mb-3">
+                            <span class="text-gray-600 dark:text-gray-400">Date & Time:</span>
+                            <span class="font-medium text-gray-800 dark:text-white" id="receiptDateTime">DD/MM/YYYY HH:MM</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-600 dark:text-gray-400">Status:</span>
+                            <span class="font-medium text-green-500">SUCCESS</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mb-6">
+                        <div class="inline-block p-4 bg-green-50 dark:bg-green-900/30 rounded-lg">
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Your plan is now active until</p>
+                            <p class="font-medium text-gray-800 dark:text-white" id="receiptValidUntil">DD/MM/YYYY</p>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Thank you for using Jio services!</p>
+                        <p class="text-xs text-gray-400 dark:text-gray-500">PRANK APP: No actual recharge was performed</p>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="bg-gray-50 dark:bg-gray-800 p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button id="viewReceiptBtn" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg text-base px-5 py-3 transition-colors duration-300 flex items-center justify-center">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            <span>View Receipt</span>
+                        </button>
+                        <button id="shareBtn" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg text-base px-5 py-3 transition-colors duration-300 flex items-center justify-center">
+                            <i class="fas fa-share-alt mr-2"></i>
+                            <span>Share This Prank</span>
+                        </button>
+                    </div>
+                    
+                    <div id="shareOptions" class="mt-6 grid grid-cols-3 md:grid-cols-6 gap-4 hidden">
+                        <button class="share-button flex flex-col items-center" data-platform="whatsapp">
+                            <div class="w-12 h-12 rounded-full bg-green-500 flex items-center justify-center mb-2">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-700 dark:text-gray-300">WhatsApp</span>
+                        </button>
+                        
+                        <button class="share-button flex flex-col items-center" data-platform="facebook">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center mb-2">
+                                <i class="fab fa-facebook-f text-white text-xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-700 dark:text-gray-300">Facebook</span>
+                        </button>
+                        
+                        <button class="share-button flex flex-col items-center" data-platform="twitter">
+                            <div class="w-12 h-12 rounded-full bg-blue-400 flex items-center justify-center mb-2">
+                                <i class="fab fa-twitter text-white text-xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-700 dark:text-gray-300">Twitter</span>
+                        </button>
+                        
+                        <button class="share-button flex flex-col items-center" data-platform="telegram">
+                            <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-2">
+                                <i class="fab fa-telegram-plane text-white text-xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-700 dark:text-gray-300">Telegram</span>
+                        </button>
+                        
+                        <button class="share-button flex flex-col items-center" data-platform="linkedin">
+                            <div class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center mb-2">
+                                <i class="fab fa-linkedin-in text-white text-xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-700 dark:text-gray-300">LinkedIn</span>
+                        </button>
+                        
+                        <button class="share-button flex flex-col items-center" data-platform="pinterest">
+                            <div class="w-12 h-12 rounded-full bg-red-600 flex items-center justify-center mb-2">
+                                <i class="fab fa-pinterest-p text-white text-xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-700 dark:text-gray-300">Pinterest</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button id="startNewRecharge" class="bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-lg text-base px-5 py-3 transition-colors duration-300">
+                    Start New Prank Recharge
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section (hidden by default, shown when navigated to) -->
+    <section id="aboutPage" class="py-12 px-4 bg-gray-100 dark:bg-gray-800 hidden">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">About This App</h2>
+            
+            <div class="glass rounded-xl p-8 shadow-xl">
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    This is a <strong>prank application</strong> designed for entertainment purposes only. No actual recharges are performed, and no personal data is collected or stored.
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    The app simulates the process of recharging a Jio mobile number and generates a fake receipt that can be shared with friends and family as a harmless prank.
+                </p>
+                <p class="text-gray-700 dark:text-gray-300 mb-4">
+                    Please use this app responsibly and ethically. Do not use it to deceive others or for any malicious purposes.
+                </p>
+                <div class="p-4 bg-yellow-50 dark:bg-yellow-900/30 rounded-lg mt-6">
+                    <p class="text-yellow-700 dark:text-yellow-400 text-sm">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        <strong>Disclaimer:</strong> This app is not affiliated with, endorsed by, or connected to Jio or Reliance Jio Infocomm Limited in any way. All trademarks belong to their respective owners.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button id="backFromAbout" class="bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg text-base px-5 py-3 transition-colors duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section (hidden by default, shown when navigated to) -->
+    <section id="contactPage" class="py-12 px-4 hidden">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Contact Us</h2>
+            
+            <div class="glass rounded-xl p-8 shadow-xl">
+                <p class="text-gray-700 dark:text-gray-300 text-center mb-6">
+                    Have questions or feedback? Feel free to reach out to us!
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-800 dark:text-white mb-2">Email</h3>
+                        <p class="text-gray-600 dark:text-gray-400">NA</p>
+                    </div>
+                    
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone-alt text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-800 dark:text-white mb-2">Phone</h3>
+                        <p class="text-gray-600 dark:text-gray-400">NA</p>
+                    </div>
+                    
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-map-marker-alt text-primary-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-800 dark:text-white mb-2">Location</h3>
+                        <p class="text-gray-600 dark:text-gray-400">NA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <button id="backFromContact" class="bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg text-base px-5 py-3 transition-colors duration-300">
+                    <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+                            <i class="fas fa-bolt text-white"></i>
+                        </div>
+                        <h1 class="ml-2 text-xl font-bold text-white">JioRecharge<span class="text-xs align-top text-red-500 ml-1">Prank</span></h1>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        A fun way to prank your friends with fake Jio recharges. Remember, this is only for entertainment!
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+                        <li><a href="#plans" class="text-gray-400 hover:text-primary-400 transition-colors">Plans</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary-400 transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">Disclaimer</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-white text-lg font-bold mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary-600 transition-colors flex items-center justify-center">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary-600 transition-colors flex items-center justify-center">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary-600 transition-colors flex items-center justify-center">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary-600 transition-colors flex items-center justify-center">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2023 JioRecharge Prank App. All rights reserved. This is a prank application not affiliated with Jio.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // DOM elements
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const proceedToPlans = document.getElementById('proceedToPlans');
+        const phoneNumber = document.getElementById('phoneNumber');
+        const plansSection = document.getElementById('plans');
+        const rechargeProcessingSection = document.getElementById('rechargeProcessing');
+        const rechargeSuccessSection = document.getElementById('rechargeSuccess');
+        const aboutPage = document.getElementById('aboutPage');
+        const contactPage = document.getElementById('contactPage');
+        const planCards = document.querySelectorAll('.plan-card');
+        const progressBar = document.getElementById('progressBar');
+        const progressPercentage = document.getElementById('progressPercentage');
+        const processingMessage = document.getElementById('processingMessage');
+        const shareBtn = document.getElementById('shareBtn');
+        const shareOptions = document.getElementById('shareOptions');
+        const shareButtons = document.querySelectorAll('.share-button');
+        const startNewRecharge = document.getElementById('startNewRecharge');
+        const viewReceiptBtn = document.getElementById('viewReceiptBtn');
+        
+        // State variables
+        let selectedPhoneNumber = '';
+        let selectedPlanAmount = '';
+        
+        // Toggle dark mode
+        darkModeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+        
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Proceed to plans
+        proceedToPlans.addEventListener('click', () => {
+            const phone = phoneNumber.value.trim();
+            if (phone.length !== 10 || !/^\d+$/.test(phone)) {
+                alert('Please enter a valid 10-digit mobile number');
+                return;
+            }
+            
+            selectedPhoneNumber = phone;
+            plansSection.classList.remove('hidden');
+            plansSection.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Plan selection
+        planCards.forEach(card => {
+            card.addEventListener('click', () => {
+                selectedPlanAmount = card.getAttribute('data-amount');
+                
+                // Update processing display
+                document.getElementById('processingPhoneNumber').textContent = `Mobile Number: +91 ${selectedPhoneNumber}`;
+                document.getElementById('processingPlanAmount').textContent = `Plan: ₹${selectedPlanAmount}`;
+                
+                // Show processing section
+                plansSection.classList.add('hidden');
+                rechargeProcessingSection.classList.remove('hidden');
+                rechargeProcessingSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Start processing animation
+                startProcessingAnimation();
+            });
+        });
+        
+        // Processing animation with countdown timer
+        function startProcessingAnimation() {
+            const steps = [
+                { element: document.getElementById('step1'), spinner: document.getElementById('step1Spinner'), check: document.getElementById('step1Check'), duration: 2000 },
+                { element: document.getElementById('step2'), spinner: document.getElementById('step2Spinner'), check: document.getElementById('step2Check'), duration: 3000 },
+                { element: document.getElementById('step3'), spinner: document.getElementById('step3Spinner'), check: document.getElementById('step3Check'), duration: 2500 },
+                { element: document.getElementById('step4'), spinner: document.getElementById('step4Spinner'), check: document.getElementById('step4Check'), duration: 1500 }
+            ];
+            
+            let currentStep = 0;
+            let totalDuration = steps.reduce((total, step) => total + step.duration, 0);
+            let elapsedTime = 0;
+            
+            // Countdown timer
+            const countdownTimer = document.getElementById('countdownTimer');
+            let timeLeft = 30; // 30 seconds countdown
+            
+            const countdown = setInterval(() => {
+                timeLeft--;
+                countdownTimer.textContent = timeLeft;
+                
+                // Add visual effects as time decreases
+                if (timeLeft <= 10) {
+                    countdownTimer.classList.add('text-red-600');
+                    if (timeLeft <= 5) {
+                        countdownTimer.classList.add('animate-pulse');
+                    }
+                }
+                
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                }
+            }, 1000);
+            
+            const updateProgressBar = (percentage) => {
+                progressBar.style.width = `${percentage}%`;
+                progressPercentage.textContent = `${percentage}%`;
+            };
+            
+            const processStep = (stepIndex) => {
+                if (stepIndex >= steps.length) {
+                    // All steps complete, show success
+                    setTimeout(() => {
+                        clearInterval(countdown); // Clear the countdown
+                        showSuccessScreen();
+                    }, 1000);
+                    return;
+                }
+                
+                const step = steps[stepIndex];
+                
+                // Activate current step
+                step.element.classList.remove('opacity-50');
+                step.spinner.classList.remove('hidden');
+                
+                // Update messages based on step
+                const messages = [
+                    "Verifying your mobile number...",
+                    "Connecting to Jio payment gateway...",
+                    "Processing your payment details...",
+                    "Finalizing your recharge, almost done!"
+                ];
+                processingMessage.textContent = messages[stepIndex];
+                
+                // Complete after duration
+                setTimeout(() => {
+                    step.spinner.classList.add('hidden');
+                    step.check.classList.remove('hidden');
+                    elapsedTime += step.duration;
+                    
+                    // Update progress bar
+                    const percentage = Math.min(Math.round((elapsedTime / totalDuration) * 100), 100);
+                    updateProgressBar(percentage);
+                    
+                    // Process next step
+                    processStep(stepIndex + 1);
+                }, step.duration);
+            };
+            
+            // Start processing
+            updateProgressBar(0);
+            processStep(0);
+        }
+        
+        // Show success screen
+        function showSuccessScreen() {
+            // Prepare receipt details
+            const transactionId = 'JIO' + Math.floor(Math.random() * 1000000000);
+            const now = new Date();
+            const dateTimeStr = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+            
+            // Calculate validity date based on plan
+            let validityDays = 28;
+            if (selectedPlanAmount === '479') validityDays = 56;
+            if (selectedPlanAmount === '749') validityDays = 90;
+            if (selectedPlanAmount === '999') validityDays = 84;
+            if (selectedPlanAmount === '349') validityDays = 30;
+            
+            const validUntil = new Date();
+            validUntil.setDate(validUntil.getDate() + validityDays);
+            const validUntilStr = validUntil.toLocaleDateString();
+            
+            // Update receipt fields
+            document.getElementById('receiptPhoneNumber').textContent = `+91 ${selectedPhoneNumber}`;
+            document.getElementById('receiptPlanAmount').textContent = `₹${selectedPlanAmount}`;
+            document.getElementById('receiptTransactionId').textContent = transactionId;
+            document.getElementById('receiptDateTime').textContent = dateTimeStr;
+            document.getElementById('receiptValidUntil').textContent = validUntilStr;
+            
+            // Show success section
+            rechargeProcessingSection.classList.add('hidden');
+            rechargeSuccessSection.classList.remove('hidden');
+            rechargeSuccessSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Toggle share options
+        shareBtn.addEventListener('click', () => {
+            shareOptions.classList.toggle('hidden');
+        });
+        
+        // Share buttons
+        shareButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const platform = button.getAttribute('data-platform');
+                const message = `I just recharged my Jio number with ₹${selectedPlanAmount}! 🎉 Try the JioRecharge prank app yourself!`;
+                const url = window.location.href;
+                
+                let shareUrl = '';
+                
+                switch (platform) {
+                    case 'whatsapp':
+                        shareUrl = `https://wa.me/?text=${encodeURIComponent(message + ' ' + url)}`;
+                        break;
+                    case 'facebook':
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(message)}`;
+                        break;
+                    case 'twitter':
+                        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}&url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'telegram':
+                        shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(message)}`;
+                        break;
+                    case 'linkedin':
+                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+                        break;
+                    case 'pinterest':
+                        shareUrl = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(message)}`;
+                        break;
+                }
+                
+                if (shareUrl) {
+                    window.open(shareUrl, '_blank');
+                }
+            });
+        });
+        
+        // View receipt button
+        viewReceiptBtn.addEventListener('click', () => {
+            // In a real app this would create a downloadable receipt, but for the iframe we'll just scroll to it
+            const receipt = document.getElementById('receiptContent');
+            receipt.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Start new recharge button
+        startNewRecharge.addEventListener('click', () => {
+            // Reset form
+            phoneNumber.value = '';
+            selectedPhoneNumber = '';
+            selectedPlanAmount = '';
+            
+            // Show initial screen
+            rechargeSuccessSection.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Phone number input validation - only allow numbers
+        phoneNumber.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            if (this.value.length > 10) {
+                this.value = this.value.slice(0, 10);
+            }
+        });
+        
+        // Page navigation functions
+        function hideAllSections() {
+            // Hide main sections
+            document.querySelector('section:not([id])').classList.add('hidden');
+            plansSection.classList.add('hidden');
+            rechargeProcessingSection.classList.add('hidden');
+            rechargeSuccessSection.classList.add('hidden');
+            
+            // Hide page sections
+            aboutPage.classList.add('hidden');
+            contactPage.classList.add('hidden');
+        }
+        
+        function showHomePage() {
+            hideAllSections();
+            document.querySelector('section:not([id])').classList.remove('hidden');
+        }
+        
+        function showAboutPage() {
+            hideAllSections();
+            aboutPage.classList.remove('hidden');
+            aboutPage.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showContactPage() {
+            hideAllSections();
+            contactPage.classList.remove('hidden');
+            contactPage.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Navigation event listeners
+        document.getElementById('homeNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            showHomePage();
+        });
+        
+        document.getElementById('homeMobileNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            showHomePage();
+            mobileMenu.classList.add('hidden');
+        });
+        
+        document.getElementById('aboutNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            showAboutPage();
+        });
+        
+        document.getElementById('aboutMobileNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            showAboutPage();
+            mobileMenu.classList.add('hidden');
+        });
+        
+        document.getElementById('contactNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            showContactPage();
+        });
+        
+        document.getElementById('contactMobileNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            showContactPage();
+            mobileMenu.classList.add('hidden');
+        });
+        
+        document.getElementById('backFromAbout').addEventListener('click', () => {
+            showHomePage();
+        });
+        
+        document.getElementById('backFromContact').addEventListener('click', () => {
+            showHomePage();
+        });
+        
+        // Plans navigation
+        document.getElementById('plansNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (selectedPhoneNumber) {
+                hideAllSections();
+                plansSection.classList.remove('hidden');
+                plansSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                showHomePage();
+            }
+        });
+        
+        document.getElementById('plansMobileNav').addEventListener('click', (e) => {
+            e.preventDefault();
+            if (selectedPhoneNumber) {
+                hideAllSections();
+                plansSection.classList.remove('hidden');
+                plansSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                showHomePage();
+            }
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
